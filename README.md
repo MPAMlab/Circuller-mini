@@ -6,6 +6,7 @@ A small &amp; round game controller that uses a 5.5' touchscreen and few buttons
 - 3D printed cases
 - 5.5" MIPI to HDMI & USB touchscreen
 - 8x Gateron low-profiled key switch
+- 11x WS2812 RGB LED
 - Arduino Leonardo
 - Demandable Computer w/ HDMI port
 
