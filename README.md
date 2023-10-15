@@ -12,7 +12,9 @@ A small &amp; round game controller that uses a 5.5' touchscreen and few buttons
 - PCB / perfboard(not recommended)
     - 8x WS2812B on 5050 package, bare unit
     - 8x 100uF capacitor
+- M3 screws x2
 
+  
 TBD
 
 ## 3D print detail
