@@ -1,16 +1,6 @@
-#include <Keyboard.h>
-#include <KeyboardLayout.h>
-#include <Keyboard_da_DK.h>
-#include <Keyboard_de_DE.h>
-#include <Keyboard_es_ES.h>
-#include <Keyboard_fr_FR.h>
-#include <Keyboard_it_IT.h>
-#include <Keyboard_sv_SE.h>
-
 #include "Keyboard.h"
 #include "FastLED.h"
-// Constants
-#define NUM_BUTTONS 8
+
 // Define the button pins
 #define BUTTON_W_PIN 3
 #define BUTTON_E_PIN 4
@@ -20,13 +10,6 @@
 #define BUTTON_Z_PIN 8
 #define BUTTON_A_PIN 9
 #define BUTTON_Q_PIN 10
-const int buttonPins[NUM_BUTTONS] = {BUTTON_W_PIN, BUTTON_E_PIN, BUTTON_D_PIN, BUTTON_C_PIN, BUTTON_X_PIN, BUTTON_Z_PIN, BUTTON_A_PIN, BUTTON_Q_PIN};
-const char buttonKeys[NUM_BUTTONS] = {'w', 'e', 'd', 'c', 'x', 'z', 'a', 'q'};
-const int debounceDelay = 50;
-
-// Variables
-int buttonState[NUM_BUTTONS];
-unsigned long lastDebounceTime[NUM_BUTTONS];
 
 #if defined(__AVR_ATmega32U4__) || defined(ARDUINO_SAMD_ZERO)
 #pragma message "当前的开发板是 ATmega32U4 或 SAMD_ZERO"
@@ -131,11 +114,15 @@ static uint8_t packet_read() {
 }
 
 void setup() {
-  for (int i = 0; i < NUM_BUTTONS; i++) {
-    pinMode(buttonPins[i], INPUT_PULLUP);
-    buttonState[i] = HIGH;
-    lastDebounceTime[i] = 0;
-  }
+  // Initialize buttons as input with internal pullup resistor
+  pinMode(BUTTON_W_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_E_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_D_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_C_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_X_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_Z_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_A_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_Q_PIN, INPUT_PULLUP);
 
   // Begin keyboard emulation
   Keyboard.begin();
@@ -153,29 +140,18 @@ uint8_t led_start, led_end, fade_tag;
 CRGB fade_prev, fade_taget;
 
 void loop() {
-  // Check each button
-  for (int i = 0; i < NUM_BUTTONS; i++) {
-    int currentButtonState = digitalRead(buttonPins[i]);
+  // If a button is pressed (LOW), emulate the corresponding key press
+  if(digitalRead(BUTTON_W_PIN) == LOW) Keyboard.write('w');
+  if(digitalRead(BUTTON_E_PIN) == LOW) Keyboard.write('e');
+  if(digitalRead(BUTTON_D_PIN) == LOW) Keyboard.write('d');
+  if(digitalRead(BUTTON_C_PIN) == LOW) Keyboard.write('c');
+  if(digitalRead(BUTTON_X_PIN) == LOW) Keyboard.write('x');
+  if(digitalRead(BUTTON_Z_PIN) == LOW) Keyboard.write('z');
+  if(digitalRead(BUTTON_A_PIN) == LOW) Keyboard.write('a');
+  if(digitalRead(BUTTON_Q_PIN) == LOW) Keyboard.write('q');
 
-    // If the button state has changed, record the time of this change
-    if (currentButtonState != buttonState[i]) {
-      lastDebounceTime[i] = millis();
-    }
-
-    // If more than 'debounceDelay' milliseconds have passed since the
-    // button state last changed, the bouncing has likely stopped
-    if ((millis() - lastDebounceTime[i]) > debounceDelay) {
-      // If the button state has changed
-      if (currentButtonState != buttonState[i]) {
-        buttonState[i] = currentButtonState;
-
-        // If the new button state is LOW (because the button is pressed)
-        if (buttonState[i] == LOW) {
-          Keyboard.write(buttonKeys[i]);
-        }
-      }
-    }
-  }
+  // Add a small delay to prevent button bouncing
+  delay(65);
 
   switch (packet_read()) {
     case LedGs8Bit:
