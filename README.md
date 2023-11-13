@@ -6,19 +6,40 @@ A small &amp; round game controller that uses a 5.5' touchscreen and few buttons
 ## Requirements
 
 - 3D printed cases [Print details](1.%20Model/readme.md)
-- Waveshare 5.5inch 1440x2560 LCD / 5.5" Phone (phone spec depends)
-- 8x Gateron low-profiled key switch KS-33 / any other switch compatible
-- 11x WS2812B RGB LED (or 3x with pre-build PCB)
-- Arduino Leonardo
-- PCB or perfboard (perfboard is not recommended)
-    - 8x WS2812B on 5050 package, bare unit
-    - 8x 100uF capacitor
-- M3 screws x14
+- Waveshare 5.5inch 1440x2560 LCD
 - Cables
     - HDMI 
-    - micro-USB to USB-A x2 for Arduino and Touch Display
-    - DC power for Arduino
-    - jump wire (quantity is to your needs)
+    - micro-USB to USB-A x2 for Touch Display Power&Touch
+    - USB-C cable for PCB
+    - XH2.54-3pin cable
+ 
+- M3 screws
+
+### PCB BOM
+
+Board 1:
+
+- Gateron low-profiled key switch KS-33 / any other switch compatible x8
+- 2x1x0.6mm switch button for reset x1
+- WS2812B 6028/3528 RGB LED x8
+- ATMEGA32U4
+- 1uF Capacitor x1
+- 22pF Capacitor x2
+- 100nF Capacitor x12
+- 470nF Capacitor x1
+- 10k ohm Resistor x2
+- 22 ohm Resistor x2
+- 5.1k ohm Resistor x2
+- 2.5A/32V FUSESMD0805 x1
+- ZMM3V6 diode x2
+- XH2.54-WI-3P x1
+- TYPE-C 16PIN connector
+
+Board 2 x3:
+
+- WS2812B 6028/3528 RGB LED x3
+- XH2.54-WI-3P x5
+- 100nF Capacitor x3
 
 ## PCB detail
 
@@ -29,6 +50,10 @@ TBD
 TBD
 
 ## Validation
+
+TBD
+
+## TODO
 
 TBD
 
