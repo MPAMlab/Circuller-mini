@@ -15,6 +15,8 @@ A small &amp; round game controller that uses a 5.5' touchscreen and few buttons
  
 - M3 screws
 
+- PCB (probably no perfboard support)
+
 ### PCB BOM
 
 Board 1:
@@ -49,13 +51,12 @@ TBD
 
 TBD
 
-## Validation
-
-TBD
-
 ## TODO
 
-TBD
+- The Current version(Rev 1.1) of Board 1 is 11x11cm, shrinking it down to 10x10cm(Rev 1.2) to make the PCB cheaper.
+- Re-test the light (rewrite the code)
+- Redo the modelling
+- Model the case (probably two version: 1. plain like a tablet, 2. assemble like a real wash machine)
 
 ## Credit
 
