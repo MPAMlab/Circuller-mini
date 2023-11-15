@@ -1,7 +1,8 @@
 # Circuller-mini
+
 A small &amp; round game controller that uses a 5.5' touchscreen and few buttons.
 
-[中文文档](Readme-CN.md)
+[中文文档](Readme-CN.md) (will be written after the project complete)
 
 ## Requirements
 
@@ -16,8 +17,11 @@ A small &amp; round game controller that uses a 5.5' touchscreen and few buttons
 - M3 screws
 
 - PCB (probably no perfboard support)
+- Keycaps (print in the model folder or buy existing low-profiled keycaps) x8
 
 ### PCB BOM
+
+All capacitors and resistors are in the 0603 package.
 
 Board 1:
 
@@ -51,6 +55,19 @@ TBD
 
 TBD
 
+## Windows tool config.ini
+
+Tested work on Wireshark 5.5inch 2k display.
+
+```
+[Config]
+1=Circuller
+2=2250
+3=1710
+4=-165
+5=0
+```
+
 ## TODO
 
 - The Current version(Rev 1.1) of Board 1 is 11x11cm, shrinking it down to 10x10cm(Rev 1.2) to make the PCB cheaper.
@@ -62,10 +79,10 @@ TBD
 
 This design and repository are not meant to violate any copyrighted content.
 
-No games are/will be tested, and I do not know what game this controller will fit.
+No games are/will be tested, and I am not aware of which game this controller will fit.
 
 Some references: 
 
-https://github.com/Sucareto/Mai2Touch
+LED support: https://github.com/Sucareto/Mai2Touch
 
-https://github.com/xiaopeng12138/MaiDXR
+Modeling reference: https://github.com/xiaopeng12138/MaiDXR
