@@ -75,7 +75,10 @@ Tested work on Wireshark 5.5-inch 2k display.
 
 ## TODO
 
-- Re-test the light (rewrite the code)
+- rewrite the code
+    - reorder LED part
+    - rewrite debounce, reference: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_debounce_type.md
+    
 - Redo the modeling
 - Model the case (probably two versions: 1. plain like a tablet, 2. assemble like a real wash machine)
 
