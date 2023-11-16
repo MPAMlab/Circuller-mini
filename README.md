@@ -1,8 +1,8 @@
-# Circuller-mini
+![image](https://github.com/MPAMlab/Circuller-mini/assets/33972760/36986918-19fd-49a9-ab5f-ce62a46bed81)# Circuller-mini
 
 A small &amp; round game controller that uses a 5.5' touchscreen and few buttons.
 
-[中文文档](Readme-CN.md) (will be written after the project complete)
+[中文文档](Readme-CN.md) (will be written after the project is complete)
 
 ## Requirements
 
@@ -28,7 +28,7 @@ Board 1:
 - Gateron low-profiled key switch KS-33 / any other switch compatible x8
 - 2x1x0.6mm switch button for reset x1
 - WS2812B 6028/3528 RGB LED x8
-- ATMEGA32U4
+- ATMEGA32U4 (needed to be bootloader pre-loaded)
 - 1uF Capacitor x1
 - 22pF Capacitor x2
 - 100nF Capacitor x12
@@ -40,6 +40,7 @@ Board 1:
 - ZMM3V6 diode x2
 - XH2.54-WI-3P x1
 - TYPE-C 16PIN connector
+- 16MHZ Oscillator x1
 
 Board 2 x3:
 
@@ -57,7 +58,7 @@ TBD
 
 ## Windows tool config.ini
 
-Tested work on Wireshark 5.5inch 2k display.
+Tested work on Wireshark 5.5-inch 2k display.
 
 ```
 [Config]
@@ -72,14 +73,14 @@ Tested work on Wireshark 5.5inch 2k display.
 
 - The Current version(Rev 1.1) of Board 1 is 11x11cm, shrinking it down to 10x10cm(Rev 1.2) to make the PCB cheaper.
 - Re-test the light (rewrite the code)
-- Redo the modelling
-- Model the case (probably two version: 1. plain like a tablet, 2. assemble like a real wash machine)
+- Redo the modeling
+- Model the case (probably two versions: 1. plain like a tablet, 2. assemble like a real wash machine)
 
 ## Credit
 
 This design and repository are not meant to violate any copyrighted content.
 
-No games are/will be tested, and I am not aware of which game this controller will fit.
+No games are/will be tested, and I am unaware of which game this controller will fit.
 
 Some references: 
 
