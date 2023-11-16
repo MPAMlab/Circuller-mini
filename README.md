@@ -36,10 +36,10 @@ Board 1:
 - 10k ohm Resistor x2
 - 22 ohm Resistor x2
 - 5.1k ohm Resistor x2
-- 2.5A/32V FUSESMD0805 x1
+- 2.5A/32V FUSE 0805 x1
 - ZMM3V6 diode x2
 - XH2.54-WI-3P x1
-- TYPE-C 16PIN connector
+- TYPE-C 16PIN connector x1
 - 16MHZ Oscillator x1
 
 Board 2 x3:
@@ -53,6 +53,10 @@ Board 2 x3:
 TBD
 
 ## Assemble
+
+TBD
+
+## Firmware load
 
 TBD
 
@@ -71,7 +75,6 @@ Tested work on Wireshark 5.5-inch 2k display.
 
 ## TODO
 
-- The Current version(Rev 1.1) of Board 1 is 11x11cm, shrinking it down to 10x10cm(Rev 1.2) to make the PCB cheaper.
 - Re-test the light (rewrite the code)
 - Redo the modeling
 - Model the case (probably two versions: 1. plain like a tablet, 2. assemble like a real wash machine)
@@ -80,7 +83,7 @@ Tested work on Wireshark 5.5-inch 2k display.
 
 This design and repository are not meant to violate any copyrighted content.
 
-No games are/will be tested, and I am unaware of which game this controller will fit.
+No games are/will be tested, and I am unaware of which game this controller can work with.
 
 Some references: 
 
