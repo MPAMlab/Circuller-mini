@@ -1,4 +1,4 @@
-![image](https://github.com/MPAMlab/Circuller-mini/assets/33972760/36986918-19fd-49a9-ab5f-ce62a46bed81)# Circuller-mini
+# Circuller-mini
 
 A small &amp; round game controller that uses a 5.5' touchscreen and few buttons.
 
